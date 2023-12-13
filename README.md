@@ -73,7 +73,7 @@ java代码编辑器：IDEA
 
 ### 📱 系统演示
 
-![输入图片说明](C:\Users\xuqingyao\Desktop\src\main\resources\public\images\readme\登录.png)
+![输入图片说明](src\main\resources\public\images\readme\登录.png)
 
 管理后台： http://43.143.97.202:9001/main
 
@@ -91,11 +91,11 @@ java代码编辑器：IDEA
 
 **登录页：**
 
-![登录页](C:\Users\xuqingyao\Desktop\src\main\resources\public\images\readme\登录.png)
+![登录页](src\main\resources\public\images\readme\登录.png)
 
 **首页：**
 
-![首页](C:\Users\xuqingyao\Desktop\src\main\resources\public\images\readme\首页.png)
+![首页](\src\main\resources\public\images\readme\首页.png)
 
 
 ---
@@ -115,24 +115,24 @@ java代码编辑器：IDEA
 
 ### 📖 UI界面展示
 
-![首页](C:\Users\xuqingyao\Desktop\src\main\resources\public\images\readme\首页.png)
-![营销计划管理页面](C:\Users\xuqingyao\Desktop\src\main\resources\public\images\readme\营销计划管理.png)
-![客户信息管理页面](C:\Users\xuqingyao\Desktop\src\main\resources\public\images\readme\客户开发计划.png)
-![流失客户管理页面](C:\Users\xuqingyao\Desktop\src\main\resources\public\images\readme\流失客户管理.png)
+![首页](src\main\resources\public\images\readme\首页.png)
+![营销计划管理页面](src\main\resources\public\images\readme\营销计划管理.png)
+![客户信息管理页面](src\main\resources\public\images\readme\客户开发计划.png)
+![流失客户管理页面](src\main\resources\public\images\readme\流失客户管理.png)
 
-![服务创建页面](C:\Users\xuqingyao\Desktop\src\main\resources\public\images\readme\服务创建.png)
+![服务创建页面](src\main\resources\public\images\readme\服务创建.png)
 
-![生成订单页面](C:\Users\xuqingyao\Desktop\src\main\resources\public\images\readme\生成订单.png)
+![生成订单页面](src\main\resources\public\images\readme\生成订单.png)
 
-![新增客户分析页面](C:\Users\xuqingyao\Desktop\src\main\resources\public\images\readme\新增客户分析.png)
+![新增客户分析页面](src\main\resources\public\images\readme\新增客户分析.png)
 
-![重要数据数量的统计页面](C:\Users\xuqingyao\Desktop\src\main\resources\public\images\readme\重要数据.png)
+![重要数据数量的统计页面](src\main\resources\public\images\readme\重要数据.png)
 
-![用户管理页面](C:\Users\xuqingyao\Desktop\src\main\resources\public\images\readme\用户管理.png)
+![用户管理页面](src\main\resources\public\images\readme\用户管理.png)
 
-![角色管理页面](C:\Users\xuqingyao\Desktop\src\main\resources\public\images\readme\角色管理.png)
+![角色管理页面](src\main\resources\public\images\readme\角色管理.png)
 
-![资源管理页面](C:\Users\xuqingyao\Desktop\src\main\resources\public\images\readme\资源管理.png)
+![资源管理页面](src\main\resources\public\images\readme\资源管理.png)
 
 
 
