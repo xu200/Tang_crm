@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.xqy.dao.XqyPermissionMapper">
+
+    <resultMap id="BaseResultMap" type="com.xqy.bean.XqyPermission">
+        <id property="id" column="id" jdbcType="INTEGER"/>
+        <result property="roleId" column="role_id" jdbcType="INTEGER"/>
+        <result property="moduleId" column="module_id" jdbcType="INTEGER"/>
+        <result property="aclValue" column="acl_value" jdbcType="VARCHAR"/>
+        <result property="createDate" column="create_date" jdbcType="TIMESTAMP"/>
+        <result property="updateDate" column="update_date" jdbcType="TIMESTAMP"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        id
+        ,role_id,module_id,
+        acl_value,create_date,update_date
+    </sql>
+    <!-- 通过传入的角色id 查询该角色id所拥有的资源权限-->
+    <select id="queryRoleAllModIds" parameterType="int" resultType="java.lang.Integer">
+        select module_id
+        from permission
+        where role_id = #{roleId}
+    </select>
+
+    <!-- 连表查询（中间表 权限表）通过传入的用户id 查询该用户id所拥有的资源权限-->
+    <select id="queryUserHasRoleIdsHasModuleIds" parameterType="int" resultType="java.lang.String">
+        select distinct p.acl_value
+        from user_role ur
+                 left join permission p on ur.role_id = p.role_id
+        where ur.user_id = #{userId}
+    </select>
+</mapper>

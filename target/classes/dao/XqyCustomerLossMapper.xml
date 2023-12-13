@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.xqy.dao.XqyCustomerLossMapper">
+
+    <resultMap id="BaseResultMap" type="com.xqy.bean.XqyCustomerLoss">
+        <id property="id" column="id" jdbcType="INTEGER"/>
+        <result property="cusNo" column="cus_no" jdbcType="VARCHAR"/>
+        <result property="cusName" column="cus_name" jdbcType="VARCHAR"/>
+        <result property="cusManager" column="cus_manager" jdbcType="VARCHAR"/>
+        <result property="lastOrderTime" column="last_order_time" jdbcType="DATE"/>
+        <result property="confirmLossTime" column="confirm_loss_time" jdbcType="DATE"/>
+        <result property="state" column="state" jdbcType="INTEGER"/>
+        <result property="lossReason" column="loss_reason" jdbcType="VARCHAR"/>
+        <result property="isValid" column="is_valid" jdbcType="INTEGER"/>
+        <result property="createDate" column="create_date" jdbcType="TIMESTAMP"/>
+        <result property="updateDate" column="update_date" jdbcType="TIMESTAMP"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        id
+        ,cus_no,cus_name,
+        cus_manager,last_order_time,confirm_loss_time,
+        state,loss_reason,is_valid,
+        create_date,update_date
+    </sql>
+    <!-- 通过参数查询流失用户 -->
+    <select id="selectByParams" parameterType="com.xqy.query.XqyCustomerLossQuery" resultMap="BaseResultMap">
+        select
+        <include refid="Base_Column_List"/>
+        from customer_loss
+        <where>
+            is_valid=1
+            <if test="null !=cusNo and cusNo!=''">
+                and cus_no=#{cusNo}
+            </if>
+            <if test="null !=cusName and cusName!=''">
+                and cus_name like concat('%',#{cusName},'%')
+            </if>
+            <if test="null !=state">
+                and state=#{state}
+            </if>
+        </where>
+    </select>
+</mapper>

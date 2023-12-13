@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.xqy.dao.XqyCustomerServeMapper">
+
+    <resultMap id="BaseResultMap" type="com.xqy.bean.XqyCustomerServe">
+        <id property="id" column="id" jdbcType="INTEGER"/>
+        <result property="serveType" column="serve_type" jdbcType="VARCHAR"/>
+        <result property="overview" column="overview" jdbcType="VARCHAR"/>
+        <result property="customer" column="customer" jdbcType="VARCHAR"/>
+        <result property="state" column="state" jdbcType="VARCHAR"/>
+        <result property="serviceRequest" column="service_request" jdbcType="VARCHAR"/>
+        <result property="createPeople" column="create_people" jdbcType="VARCHAR"/>
+        <result property="assigner" column="assigner" jdbcType="VARCHAR"/>
+        <result property="assignTime" column="assign_time" jdbcType="TIMESTAMP"/>
+        <result property="serviceProce" column="service_proce" jdbcType="VARCHAR"/>
+        <result property="serviceProcePeople" column="service_proce_people" jdbcType="VARCHAR"/>
+        <result property="serviceProceTime" column="service_proce_time" jdbcType="TIMESTAMP"/>
+        <result property="serviceProceResult" column="service_proce_result" jdbcType="VARCHAR"/>
+        <result property="satisfaction" column="satisfaction" jdbcType="VARCHAR"/>
+        <result property="isValid" column="is_valid" jdbcType="INTEGER"/>
+        <result property="updateDate" column="update_date" jdbcType="TIMESTAMP"/>
+        <result property="createDate" column="create_date" jdbcType="TIMESTAMP"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        id
+        ,serve_type,overview,
+        customer,state,service_request,
+        create_people,assigner,assign_time,
+        service_proce,service_proce_people,service_proce_time,
+        service_proce_result,satisfaction,is_valid,
+        update_date,create_date
+    </sql>
+    <!-- 查询客户服务 -->
+    <select id="selectByParams" parameterType="com.xqy.query.XqyCustomerServeQuery" resultType="com.xqy.bean.XqyCustomerServe">
+        select c.*,d.data_dic_value as dicValue
+        from customer_serve c left join datadic d on c.serve_type = d.id
+        <where>
+            c.is_valid=1
+            <if test="null !=customer and customer !=''">
+                and customer like concat('%',#{customer},'%')
+            </if>
+            <if test="null !=serveType">
+                and serve_type =#{serveType}
+            </if>
+            <if test="null !=state and state !=''">
+                and state =#{state}
+            </if>
+            <if test="null !=assigner ">
+                and assigner =#{assigner}
+            </if>
+        </where>
+    </select>
+</mapper>

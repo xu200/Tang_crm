@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.xqy.dao.XqyCustomerContactMapper">
+
+    <resultMap id="BaseResultMap" type="com.xqy.bean.XqyCustomerContact">
+        <id property="id" column="id" jdbcType="INTEGER"/>
+        <result property="cusId" column="cus_id" jdbcType="INTEGER"/>
+        <result property="contactTime" column="contact_time" jdbcType="TIMESTAMP"/>
+        <result property="address" column="address" jdbcType="VARCHAR"/>
+        <result property="overview" column="overview" jdbcType="VARCHAR"/>
+        <result property="createDate" column="create_date" jdbcType="TIMESTAMP"/>
+        <result property="updateDate" column="update_date" jdbcType="TIMESTAMP"/>
+        <result property="isValid" column="is_valid" jdbcType="INTEGER"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        id
+        ,cus_id,contact_time,
+        address,overview,create_date,
+        update_date,is_valid
+    </sql>
+
+    <!-- 查询所有联系 -->
+    <select id="selectAll" parameterType="com.xqy.query.XqyCustomerContactQuery" resultMap="BaseResultMap">
+        select
+        <include refid="Base_Column_List"/>
+        from customer_contact
+        where is_valid = 1
+        and cus_id = #{cusId}
+    </select>
+</mapper>
