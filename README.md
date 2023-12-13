@@ -73,7 +73,7 @@ java代码编辑器：IDEA
 
 ### 📱 系统演示
 
-![输入图片说明](src\main\resources\public\images\readme\登录.png)
+![登陆页面](https://github.com/xu200/Tang_crm/blob/35cf7a069b260ebb94363544544bbeb28226d48b/src/main/resources/public/images/readme/%E7%99%BB%E5%BD%95.png)
 
 管理后台： http://43.143.97.202:9001/main
 
@@ -91,11 +91,11 @@ java代码编辑器：IDEA
 
 **登录页：**
 
-![登录页](src\main\resources\public\images\readme\登录.png)
+![登录页](https://github.com/xu200/Tang_crm/blob/35cf7a069b260ebb94363544544bbeb28226d48b/src/main/resources/public/images/readme/%E7%99%BB%E5%BD%95.png)
 
 **首页：**
 
-![首页](\src\main\resources\public\images\readme\首页.png)
+![首页](https://github.com/xu200/Tang_crm/blob/35cf7a069b260ebb94363544544bbeb28226d48b/src/main/resources/public/images/readme/%E9%A6%96%E9%A1%B5.png)
 
 
 ---
@@ -115,24 +115,24 @@ java代码编辑器：IDEA
 
 ### 📖 UI界面展示
 
-![首页](src\main\resources\public\images\readme\首页.png)
-![营销计划管理页面](src\main\resources\public\images\readme\营销计划管理.png)
-![客户信息管理页面](src\main\resources\public\images\readme\客户开发计划.png)
-![流失客户管理页面](src\main\resources\public\images\readme\流失客户管理.png)
+![首页](https://github.com/xu200/Tang_crm/blob/35cf7a069b260ebb94363544544bbeb28226d48b/src/main/resources/public/images/readme/%E9%A6%96%E9%A1%B5.png)
+![营销计划管理页面](https://github.com/xu200/Tang_crm/blob/35cf7a069b260ebb94363544544bbeb28226d48b/src/main/resources/public/images/readme/%E8%90%A5%E9%94%80%E8%AE%A1%E5%88%92%E7%AE%A1%E7%90%86.png)
+![客户信息管理页面](https://github.com/xu200/Tang_crm/blob/35cf7a069b260ebb94363544544bbeb28226d48b/src/main/resources/public/images/readme/%E5%AE%A2%E6%88%B7%E4%BF%A1%E6%81%AF%E7%AE%A1%E7%90%86.png)
+![流失客户管理页面](https://github.com/xu200/Tang_crm/blob/35cf7a069b260ebb94363544544bbeb28226d48b/src/main/resources/public/images/readme/%E6%B5%81%E5%A4%B1%E5%AE%A2%E6%88%B7%E7%AE%A1%E7%90%86.png)
 
-![服务创建页面](src\main\resources\public\images\readme\服务创建.png)
+![服务创建页面](https://github.com/xu200/Tang_crm/blob/35cf7a069b260ebb94363544544bbeb28226d48b/src/main/resources/public/images/readme/%E6%9C%8D%E5%8A%A1%E5%88%9B%E5%BB%BA.png)
 
-![生成订单页面](src\main\resources\public\images\readme\生成订单.png)
+![生成订单页面](https://github.com/xu200/Tang_crm/blob/35cf7a069b260ebb94363544544bbeb28226d48b/src/main/resources/public/images/readme/%E7%94%9F%E6%88%90%E8%AE%A2%E5%8D%95.png)
 
-![新增客户分析页面](src\main\resources\public\images\readme\新增客户分析.png)
+![新增客户分析页面](https://github.com/xu200/Tang_crm/blob/35cf7a069b260ebb94363544544bbeb28226d48b/src/main/resources/public/images/readme/%E6%96%B0%E5%A2%9E%E5%AE%A2%E6%88%B7%E5%88%86%E6%9E%90.png)
 
-![重要数据数量的统计页面](src\main\resources\public\images\readme\重要数据.png)
+![重要数据数量的统计页面](https://github.com/xu200/Tang_crm/blob/35cf7a069b260ebb94363544544bbeb28226d48b/src/main/resources/public/images/readme/%E9%87%8D%E8%A6%81%E6%95%B0%E6%8D%AE.png)
 
-![用户管理页面](src\main\resources\public\images\readme\用户管理.png)
+![用户管理页面](https://github.com/xu200/Tang_crm/blob/35cf7a069b260ebb94363544544bbeb28226d48b/src/main/resources/public/images/readme/%E7%94%A8%E6%88%B7%E7%AE%A1%E7%90%86.png)
 
-![角色管理页面](src\main\resources\public\images\readme\角色管理.png)
+![角色管理页面](https://github.com/xu200/Tang_crm/blob/35cf7a069b260ebb94363544544bbeb28226d48b/src/main/resources/public/images/readme/%E8%A7%92%E8%89%B2%E7%AE%A1%E7%90%86.png)
 
-![资源管理页面](src\main\resources\public\images\readme\资源管理.png)
+![资源管理页面](https://github.com/xu200/Tang_crm/blob/35cf7a069b260ebb94363544544bbeb28226d48b/src/main/resources/public/images/readme/%E8%B5%84%E6%BA%90%E7%AE%A1%E7%90%86.png)
 
 
 
