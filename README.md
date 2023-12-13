@@ -14,6 +14,7 @@
 <div align="center" >
 <a href="https://gitee.com/Skr_Alex/xqy-final-project/blob/Alex/README.md">宽屏预览</a>
 </div>
+</div>
 
 
 ---
@@ -35,7 +36,8 @@ v1.2.0 更新说明【更新时间2023年12月13日】
 
 ### 📝 介绍
 
-本项目是基于Spring Boot的唐三藏CRM后台管理系统，用于实现客户关系管理。CRM（Customer Relationship Management）是指企业与客户之间建立和维护良好关系的管理方法和策略。该系统提供了一套完整的功能，帮助企业有效地管理客户信息、跟进销售机会、提升客户满意度等。
+本项目是基于Spring Boot的唐三藏CRM后台管理系统，用于实现客户关系管理。CRM（Customer Relationship
+Management）是指企业与客户之间建立和维护良好关系的管理方法和策略。该系统提供了一套完整的功能，帮助企业有效地管理客户信息、跟进销售机会、提升客户满意度等。
 
 ---
 
@@ -69,8 +71,7 @@ Web浏览器：推荐使用Chrome、Firefox等现代浏览器。
 java代码编辑器：IDEA
 ```
 
-
-###  📱 系统演示
+### 📱 系统演示
 
 ![输入图片说明](C:\Users\xuqingyao\Desktop\src\main\resources\public\images\readme\登录.png)
 
@@ -78,13 +79,15 @@ java代码编辑器：IDEA
 
 账号：xqy 密码：123456
 
-> 听说，大神你想看看CRM开源项目的完整框架？<a href="https://gitee.com/Skr_Alex/xqy-final-project/tree/master/">戳这儿，轻松获取！</a>
+> 听说，大神你想看看CRM开源项目的完整框架？<a href="https://gitee.com/Skr_Alex/xqy-final-project/tree/master/">
+> 戳这儿，轻松获取！</a>
 
 ---
 
-###  🔐 安装教程
+### 🔐 安装教程
 
-1.新建一个名为 **crm** 的数据库，然后导入本项目中的sql文件 2.IDEA安装lombok插件（在插件库中直接搜索即可下载） 3.运行启动访问 **http://localhost:8080/** 即可 4.可在swagger（ **localhost:8080/swagger-ui.html** ）中查看本项目中的所有接口，有个总体了解
+1.新建一个名为 **crm** 的数据库，然后导入本项目中的sql文件 2.IDEA安装lombok插件（在插件库中直接搜索即可下载） 3.运行启动访问
+**http://localhost:8080/** 即可 4.可在swagger（ **localhost:8080/swagger-ui.html** ）中查看本项目中的所有接口，有个总体了解
 
 **登录页：**
 
@@ -110,7 +113,7 @@ java代码编辑器：IDEA
 9. 管理员和其他不同角色的用户身份的登录所显示的页面和权限也不同。
 10. 根据营销管理，服务管理，流失客户管理，系统设置管理，客户管理，数据报表管理分为了管理员，销售，客户经理，技术经理，人事，法律顾问的数据权限。
 
-###  📖 UI界面展示
+### 📖 UI界面展示
 
 ![首页](C:\Users\xuqingyao\Desktop\src\main\resources\public\images\readme\首页.png)
 ![营销计划管理页面](C:\Users\xuqingyao\Desktop\src\main\resources\public\images\readme\营销计划管理.png)
@@ -135,20 +138,20 @@ java代码编辑器：IDEA
 
 ---
 
-###  💎 捐赠
+### 💎 捐赠
 
 赠人玫瑰，手留余香！CRM诚挚地邀请大家积极参与捐赠，我会将捐赠获得的费用，悉数用于支持公益项目，让善意无限传递下去！
 在此深表感谢~
 
 ---
 
-###  📸 特别鸣谢
+### 📸 特别鸣谢
 
 排名不分先后，感谢这些软件的开发者：java、ftl、redis、mysql、maven、js、echarts、swagger、echats、page-Helper等，如有遗漏请联系我！
 
 ---
 
-###  🎬 核心开发团队
+### 🎬 核心开发团队
 
 产品：Alex
 
@@ -161,7 +164,7 @@ UI：Alex
 
 ---
 
-###  📺 使用须知
+### 📺 使用须知
 
 1、允许用于个人学习、毕业设计、教学案例、公益事业、商业使用；
 
@@ -172,7 +175,7 @@ UI：Alex
 
 ---
 
-###  💾 版权信息
+### 💾 版权信息
 
 本项目包含的第三方源码和二进制文件之版权信息另行标注。
 
