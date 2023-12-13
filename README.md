@@ -8,8 +8,8 @@
 <div align="center">
 
 [在线体验](http://43.143.97.202:9001/main) |
-[帮助文档](https://gitee.com/Skr_Alex/xqy-final-project/blob/master/readme.md) |
-[Gitee社区]([Alex001 (Skr_Alex) - Gitee.com](https://gitee.com/Skr_Alex))
+[帮助文档](https://github.com/xu200/Tang_crm/blob/main/README.md) |
+[Github社区](https://github.com/xu200/Tang_crm)
 
 <div align="center" >
 <a href="https://gitee.com/Skr_Alex/xqy-final-project/blob/Alex/README.md">宽屏预览</a>
@@ -185,5 +185,5 @@ All rights reserved。
 
 ---
 
-[返回顶部 :fa-arrow-circle-up: ](https://gitee.com/Skr_Alex/xqy-final-project/tree/master/)
+[返回顶部 :fa-arrow-circle-up: ](https://github.com/xu200/Tang_crm)
 
