@@ -12,7 +12,7 @@ import lombok.Data;
 import lombok.EqualsAndHashCode;
 
 /**
- * @TableName t_sale_chance
+ * @TableName sale_chance
  */
 @TableName(value = "sale_chance")
 @Data

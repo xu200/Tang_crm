@@ -13,7 +13,7 @@ import lombok.EqualsAndHashCode;
 import lombok.experimental.Accessors;
 
 /**
- * @TableName t_customer_linkman
+ * @TableName customer_linkman
  */
 @Data
 @EqualsAndHashCode(callSuper = false)

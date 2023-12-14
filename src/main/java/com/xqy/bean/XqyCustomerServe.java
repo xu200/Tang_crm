@@ -14,7 +14,7 @@ import lombok.experimental.Accessors;
 import org.springframework.format.annotation.DateTimeFormat;
 
 /**
- * @TableName t_customer_serve
+ * @TableName customer_serve
  */
 @Data
 @EqualsAndHashCode(callSuper = false)

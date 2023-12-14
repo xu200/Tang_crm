@@ -15,7 +15,7 @@ import org.springframework.format.annotation.DateTimeFormat;
 
 /**
  * @author xu
- * @TableName t_cus_dev_plan
+ * @TableName cus_dev_plan
  */
 @Data
 @EqualsAndHashCode(callSuper = false)

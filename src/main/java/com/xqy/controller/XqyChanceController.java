@@ -7,8 +7,12 @@ import com.xqy.bean.XqySaleChance;
 import com.xqy.query.XqySaleChanceQuery;
 import com.xqy.service.XqySaleChanceService;
 import com.xqy.service.XqyUserService;
+import com.xqy.utils.RedisUtil;
 import com.xqy.utils.XqyLoginUserUtil;
 import io.swagger.annotations.ApiOperation;
+import org.springframework.cache.annotation.CacheEvict;
+import org.springframework.cache.annotation.CachePut;
+import org.springframework.cache.annotation.Cacheable;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -35,10 +39,12 @@ public class XqyChanceController extends XqyResultController {
     @Resource
     private XqyUserService userService;
 
-    @ApiOperation("营销机会列表")
+
+    @ApiOperation(value = "营销机会列表")
     @GetMapping("list")
     @RequirePermission(code = "101001")
     @ResponseBody
+    @Cacheable(cacheNames = "sale_chance", key = "#saleChanceQuery")
     //通过传入参数查询营销机会,考虑到与开发计划共用该查询接口，增加了flag标记（标记为开发计划查询），通过（request）获得当前用户id
     public Map<String, Object> querySaleChanceByParams(Integer flag, HttpServletRequest request, XqySaleChanceQuery saleChanceQuery) {
         if (flag != null && flag == 1) {
@@ -60,6 +66,7 @@ public class XqyChanceController extends XqyResultController {
     @PostMapping("save")
     @RequirePermission(code = "101002")
     @ResponseBody
+    @CachePut(value = "sale_chance", key = "#result.id") //返回结果中的ID
     public XqyResultInfo saveSaleChance(HttpServletRequest request, XqySaleChance saleChance) {
         //通过Cookie获取id
         int userId = XqyLoginUserUtil.releaseUserIdFromCookie(request);
@@ -69,12 +76,14 @@ public class XqyChanceController extends XqyResultController {
         saleChance.setCreateMan(trueName);
         //保存记录
         saleChanceService.saveSaleChance(saleChance);
+
         return success("机会数据添加成功");
     }
 
 
     @ApiOperation("转发到更新或添加营销机会页面")
     @GetMapping("addOrUpdateSaleChancePage")
+    @CachePut(value = "saleChance", key = "#result.id") //返回结果中的ID
     public String addOrUpdateSaleChancePage(Integer id, Model model) {
         if (null != id) {
             model.addAttribute("saleChance", saleChanceService.getById(id));
@@ -96,6 +105,7 @@ public class XqyChanceController extends XqyResultController {
     @PostMapping("delete")
     @RequirePermission(code = "101003")
     @ResponseBody
+    @CacheEvict(value = "sale_chance", key = "#ids", beforeInvocation = false)
     public XqyResultInfo deleteSaleChance(Integer[] ids) {
         saleChanceService.deleteSaleChance(ids);
         return success("机会数据删除成功!");

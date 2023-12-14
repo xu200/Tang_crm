@@ -7,6 +7,7 @@ import com.xqy.bean.XqyCustomerContact;
 import com.xqy.query.XqyCustomerContactQuery;
 import com.xqy.service.XqyCustomerContactService;
 import io.swagger.annotations.ApiOperation;
+import org.springframework.cache.annotation.Cacheable;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -50,6 +51,7 @@ public class XqyCustomerContactController extends XqyResultController {
     @ApiOperation("查询所有交往记录")
     @GetMapping("list")
     @ResponseBody
+    @Cacheable(cacheNames = "customer_contact", key = "#customerContactQuery")
     public Map<String, Object> queryCustomersByParams(XqyCustomerContactQuery customerContactQuery) {
         //System.out.println("=========="+customerContactService.selectAll(customerContactQuery));
         return customerContactService.selectAll(customerContactQuery);

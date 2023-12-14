@@ -7,6 +7,9 @@ import com.xqy.query.XqyCusDevPlanQuery;
 import com.xqy.service.XqyCusDevPlanService;
 import com.xqy.service.XqySaleChanceService;
 import io.swagger.annotations.ApiOperation;
+import org.springframework.cache.annotation.CacheEvict;
+import org.springframework.cache.annotation.CachePut;
+import org.springframework.cache.annotation.Cacheable;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
@@ -49,6 +52,7 @@ public class XqyCusDevPlanController extends XqyResultController {
     @ApiOperation("条件查询")
     @GetMapping("list")
     @ResponseBody
+    @Cacheable(cacheNames = "cus_dev_plan", key = "#cusDevPlanQuery")
     public Map<String, Object> queryCusDevPlansByParams(XqyCusDevPlanQuery cusDevPlanQuery) {
         return cusDevPlanService.queryCusDevPlansByParams(cusDevPlanQuery);
     }
@@ -57,6 +61,7 @@ public class XqyCusDevPlanController extends XqyResultController {
     @ApiOperation("添加计划工作")
     @PostMapping("save")
     @ResponseBody
+    @CachePut(value = "cus_dev_plan", key = "#result.id") //返回结果中的ID
     public XqyResultInfo saveCusDevPlan(XqyCusDevPlan cusDevPlan) {
         cusDevPlanService.saveCusDevPlan(cusDevPlan);
         //调用封装的sucess方法
@@ -66,6 +71,7 @@ public class XqyCusDevPlanController extends XqyResultController {
     @ApiOperation("更新计划项")
     @PutMapping("update")
     @ResponseBody
+    @CachePut(value = "cus_dev_plan", key = "#result.id") //返回结果中的ID
     public XqyResultInfo updateCusDevPlan(XqyCusDevPlan cusDevPlan) {
         cusDevPlanService.updateCusDevPlan(cusDevPlan);
         return success("计划项数据更新成功");
@@ -74,6 +80,7 @@ public class XqyCusDevPlanController extends XqyResultController {
     @ApiOperation("删除计划项")
     @DeleteMapping("delete")
     @ResponseBody
+    @CacheEvict(value = "cus_dev_plan", key = "#ids", beforeInvocation = false)
     public XqyResultInfo deleteCusDevPlan(Integer id) {
         cusDevPlanService.deleteCusDevPlan(id);
         return success("计划项数据删除成功");

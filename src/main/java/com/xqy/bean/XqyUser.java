@@ -15,7 +15,7 @@ import java.util.Date;
 
 /**
  * @author xu
- * @TableName t_user
+ * @TableName user
  * @since 2023-9-28
  */
 @Data

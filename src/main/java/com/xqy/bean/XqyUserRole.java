@@ -15,7 +15,7 @@ import lombok.EqualsAndHashCode;
 import lombok.experimental.Accessors;
 
 /**
- * @TableName t_user_role
+ * @TableName user_role
  */
 @TableName(value = "user_role")
 @Data

@@ -15,7 +15,7 @@ import lombok.EqualsAndHashCode;
 import lombok.experimental.Accessors;
 
 /**
- * @TableName t_permission
+ * @TableName permission
  */
 @Data
 @EqualsAndHashCode(callSuper = false)
